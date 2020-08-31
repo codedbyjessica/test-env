@@ -1,0 +1,67 @@
+{
+  "scripts": {
+    "start": "echo \" use 'npm run [local|qa|staging|prod]' \"",
+    "local": "target_environment=local gulp serve",
+    "qa": "target_environment=qa gulp serve",
+    "stage": "target_environment=staging gulp serve",
+    "prod": " target_environment=prod gulp serve ",
+    "build-local": "target_environment=local gulp build",
+    "build-qa": "target_environment=qa gulp build",
+    "build-stage": "target_environment=stage gulp build",
+    "build-prod": " target_environment=prod gulp build "
+  },
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.5.2",
+    "browser-sync": "^2.26.7",
+    "del": "^2.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-babel": "^6.1.1",
+    "gulp-cache": "^0.4.2",
+    "gulp-cache-bust": "^1.4.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-eslint": "^3.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-string-replace": "^1.1.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.0.0",
+    "run-sequence": "^1.2.2",
+    "wiredep": "^4.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  },
+  "dependencies": {
+    "gulp-inline-source": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-using": "^0.1.1",
+    "imask": "^5.1.6"
+  }
+}

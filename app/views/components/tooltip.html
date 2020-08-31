@@ -1,0 +1,54 @@
+{% macro render(config) %}
+
+
+<div class="tooltip-wrapper">
+    {% if config.type == "link" %}
+    <a href="{{config.link}}" data-tooltip="{{ config.tooltipText }}" data-tooltip-{{ config.position }} data-tooltip-{{ config.size }}> 
+        {{ config.triggerText }} 
+    </a>
+
+    {% elif config.type == "div" %}
+    <div data-tooltip="{{ config.tooltipText }}" data-tooltip-{{ config.position }} data-tooltip-{{ config.size }}> 
+        {{ config.triggerText }} 
+    </div>
+
+    {% elif config.type == "button" %}
+    <button data-tooltip="{{ config.tooltipText }}" data-tooltip-{{ config.position }} data-tooltip-{{ config.size }}> 
+        {{ config.triggerText }} 
+    </button>
+
+    {% elif config.type == "h1" %}
+    <h1 data-tooltip="{{ config.tooltipText }}" data-tooltip-{{ config.position }} data-tooltip-{{ config.size }}> 
+        {{ config.triggerText }} 
+    </h1>
+
+    {% elif config.type == "h2" %}
+    <h2 data-tooltip="{{ config.tooltipText }}" data-tooltip-{{ config.position }} data-tooltip-{{ config.size }}> 
+        {{ config.triggerText }} 
+    </h2>
+
+    {% elif config.type == "h3" %}
+    <h3 data-tooltip="{{ config.tooltipText }}" data-tooltip-{{ config.position }} data-tooltip-{{ config.size }}> 
+        {{ config.triggerText }} 
+    </h3>
+
+    {% elif config.type == "h4" %}
+    <h4 data-tooltip="{{ config.tooltipText }}" data-tooltip-{{ config.position }} data-tooltip-{{ config.size }}> 
+        {{ config.triggerText }} 
+    </h4>
+
+    {% elif config.type == "h5" %}
+    <h5 data-tooltip="{{ config.tooltipText }}" data-tooltip-{{ config.position }} data-tooltip-{{ config.size }}> 
+        {{ config.triggerText }} 
+    </h5>
+
+    {% endif %}
+
+    <div class="tooltip" style="{{ config.style }}">{{config.tooltipText}} 
+        <div class="tooltip-arrow" data-tooltip-arrow-{{ config.position }} arrow-show-{{ config.arrow }} >
+            <div class="arrow" style="background: {{ config.arrowColor }}"></div>
+        </div>
+    </div>
+</div>
+
+{% endmacro %}

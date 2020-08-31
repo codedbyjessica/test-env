@@ -1,0 +1,177 @@
+section {
+    padding: 50px 200px;
+    background: #efefef;
+}
+/**
+* Tooltip Styles
+*/
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+    cursor: pointer;
+}
+
+
+/* Hide the tooltip content by default */
+// [data-tooltip]:before,
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+$padding-x: 12px;
+$padding-y: 6px;
+
+/* Position tooltip above the element */
+// [data-tooltip]:before,
+.tooltip {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: $padding-y $padding-x;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+    z-index: 1;
+}
+a + .tooltip, button + .tooltip {
+    bottom: 150%;
+}
+
+
+$arrow-width: 10px;
+$arrow-wrapper-width: 7px;
+$arrow-wrapper-height: 14px;
+.tooltip-arrow {
+    position: absolute;
+    overflow:hidden;
+    width: $arrow-wrapper-width;
+    height: $arrow-wrapper-height;
+    bottom: -17px;
+    left: calc(50% - 4px);
+    transform: translateY(-50%) rotate(-90deg);
+    .arrow {
+        position:absolute;
+        width:$arrow-width;
+        height:$arrow-width;
+        right:0px;
+        top:50%;
+        transform: translate(50%, -50%) rotate(45deg);
+        background-color: #000;
+        background-color: hsla(0, 0%, 20%, 0.9);
+    }
+}
+
+
+
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover + .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+// positioning
+$left-spacing: 16px;
+// [data-tooltip-left]:before,
+[data-tooltip-left] + .tooltip {
+    bottom: auto;
+    left: auto;
+    top: 50%;
+    right: calc(100% + #{$left-spacing});
+    transform: translateY(-50%);
+}
+[data-tooltip-arrow-left].tooltip-arrow {
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    right: -$arrow-wrapper-width;
+    left: auto;
+    .arrow {
+        right:0px;
+        top:50%;
+    }
+}
+
+
+$right-spacing: 16px;
+// [data-tooltip-right]:before,
+[data-tooltip-right] + .tooltip {
+    bottom: auto;
+    right: calc(-50% - #{$padding-x} - #{$left-spacing});
+    right: auto;
+    left:auto;
+    left: calc(100% + #{$right-spacing});
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+[data-tooltip-arrow-right].tooltip-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -$arrow-wrapper-width;
+    .arrow {
+        right:0px;
+        top:50%;
+    }
+}
+
+
+// [data-tooltip-bottom]:before,
+[data-tooltip-bottom] + .tooltip {
+    bottom: auto;
+    right: auto;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+a[data-tooltip-bottom] + .tooltip, button[data-tooltip-bottom] + .tooltip {
+    bottom: auto;
+    right: auto;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+[data-tooltip-arrow-bottom].tooltip-arrow {
+    top: -3px;
+    transform: translateY(-50%) rotate(90deg);
+    left: calc(50% - 2px);
+}
+
+
+// [data-tooltip-large]:before,
+[data-tooltip] + .tooltip {
+    width:400px;
+}
+
+// [data-tooltip-medium]:before,
+[data-tooltip] + .tooltip {
+    width:200px;
+}
+
+// [data-tooltip-small]:before,
+[data-tooltip] + .tooltip {
+    width:80px;
+}
+
+[arrow-show-none] {
+    display: none !important;
+}

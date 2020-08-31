@@ -1,0 +1,239 @@
+{% extends "templates/layout.html" %}
+
+{% import "components/tooltip.html" as tooltip %}
+
+{% block page %}
+    <div>components</div>
+    <h2>tooltips</h2>
+
+    <br /> ________________________________________________
+    <h3>links</h3>
+
+    <h4>auto</h4>
+    <section>
+        {% 
+            set tooltip4 = {
+                type: 'link',
+                link: '#hello',
+                tooltipText: 'tooltiptext auto',
+                triggerText: 'trigger text auto'
+            } 
+        %}
+        {{ tooltip.render(tooltip4) }}
+    </section>
+
+    
+    <h4>bottom</h4>
+    <section>
+        {% 
+            set tooltip3 = {
+                type: 'link',
+                link: '#hello',
+                tooltipText: 'tooltiptext bottom medium',
+                triggerText: 'trigger text bottom medium',
+                position: 'bottom',
+                size: 'medium',
+                style: 'background: #357EC7; color: white;',
+                arrowColor: '#357EC7'
+            } 
+        %}
+        {{ tooltip.render(tooltip3) }}
+    </section>
+
+    <h4>left</h4>
+    <section>
+        {% 
+            set tooltip1 = {
+                type: 'link',
+                link: '',
+                tooltipText: 'tooltiptext left small',
+                triggerText: 'trigger text left small',
+                position: 'left',
+                size: 'small',
+                style: 'background: pink; color: black;',
+                arrowColor: 'pink'
+            } 
+        %}
+        {{ tooltip.render(tooltip1) }}
+    </section>
+
+    <h4>right</h4>
+    <section>
+        {% 
+            set tooltip2 = {
+                type: 'link',
+                link: '#hello',
+                tooltipText: 'tooltiptext right large tooltiptext right large tooltiptext right large tooltiptext right large ',
+                triggerText: 'trigger text right large',
+                position: 'right',
+                size: 'large'
+            } 
+        %}
+        {{ tooltip.render(tooltip2) }}
+    </section>
+
+    <h4>custom style</h4>
+    <p>color: purple; background: limegreen; width: 400px; border-radius: 50%; padding: 20px;</p>
+    <section>
+        {% 
+            set tooltip2 = {
+                type: 'link',
+                link: '#hello',
+                tooltipText: 'tooltiptext right large tooltiptext right large tooltiptext right large tooltiptext right large ',
+                triggerText: 'trigger text right large',
+                position: 'right',
+                size: 'large',
+                style: 'color: purple; background: limegreen; width: 200px; border-radius: 50%; padding: 30px;',
+                arrow: 'none'
+            } 
+        %}
+        {{ tooltip.render(tooltip2) }}
+    </section>
+
+
+    <h4>custom style</h4>
+    <p>color: lightpink; background: rebeccapurple; width: 300px; border-radius: 10px; opacity: 0.8; text-align: right; text-decoration: underline; font-size: 24px; padding: 40px;</p>
+    <section>
+        {% 
+            set tooltip2 = {
+                type: 'link',
+                link: '#hello',
+                tooltipText: 'custom styling custom styling custom styling custom styling ',
+                triggerText: 'triggering custom',
+                position: 'bottom',
+                size: 'large',
+                style: 'color: lightpink; background: rebeccapurple; width: 300px; border-radius: 10px; opacity: 0.8; text-align: right; text-decoration: underline; font-size: 24px; padding: 40px;',
+                arrow: 'none'
+            } 
+        %}
+        {{ tooltip.render(tooltip2) }}
+    </section>
+    <br /> ________________________________________________
+
+    <h3>div</h3>
+
+    <h4>auto</h4>
+    <section>
+        {% 
+            set tooltip5 = {
+                type: 'div',
+                tooltipText: 'tooltiptext auto',
+                triggerText: 'trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto'
+            } 
+        %}
+        {{ tooltip.render(tooltip5) }}
+    </section>
+    
+    <h4>bottom</h4>
+    <section>
+        {% 
+            set tooltip6 = {
+                type: 'div',
+                tooltipText: 'tooltiptext bottom large tooltiptext bottom large tooltiptext bottom large tooltiptext bottom large',
+                triggerText: 'trigger div text bottom large div text bottom large ttrigger div text bottom large ttrigger div text bottom large trigger div text bottom large trigger div text bottom large trigger div text bottom large trigger div text bottom large trigger div text bottom large trigger div text bottom large',
+                position: 'bottom',
+                size: 'large'
+            } 
+        %}
+        {{ tooltip.render(tooltip6) }}
+    </section>
+    
+    <h4>left</h4>
+    <section>
+        {% 
+            set tooltip7 = {
+                type: 'div',
+                tooltipText: 'tooltiptext left small',
+                triggerText: 'trigger text left small trigger text left medium trigger text left medium trigger text left medium trigger text left medium trigger text left medium',
+                position: 'left',
+                size: 'small'
+            } 
+        %}
+        {{ tooltip.render(tooltip7) }}
+    </section>
+
+    <h4>right</h4>
+    <section>
+        {% 
+            set tooltip8 = {
+                type: 'div',
+                tooltipText: 'tooltiptext right large tooltiptext right large tooltiptext right large tooltiptext right small tooltiptext right large tooltiptext right large tooltiptext right large tooltiptext right small tooltiptext right large tooltiptext right large tooltiptext right large tooltiptext right small ',
+                triggerText: 'trigger text right small',
+                position: 'right',
+                size: 'small'
+            } 
+        %}
+        {{ tooltip.render(tooltip8) }}
+    </section>
+    <br /> ________________________________________________
+
+    <h3>button</h3>
+
+    <h4>auto</h4>
+    <section>
+        {% 
+            set tooltip9 = {
+                type: 'button',
+                tooltipText: 'tooltiptext auto',
+                triggerText: 'Le button'
+            } 
+        %}
+        {{ tooltip.render(tooltip9) }}
+    </section>
+
+    <br /> ________________________________________________
+    <h3>headings</h3>
+
+    <h4>auto</h4>
+    <section>
+        {% 
+            set tooltip10 = {
+                type: 'h1',
+                tooltipText: 'tooltiptext auto',
+                triggerText: 'trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto trigger text auto'
+            } 
+        %}
+        {{ tooltip.render(tooltip10) }}
+    </section>
+    
+    <h4>bottom</h4>
+    <section>
+        {% 
+            set tooltip11 = {
+                type: 'h3',
+                tooltipText: 'tooltiptext bottom large tooltiptext bottom large tooltiptext bottom large tooltiptext bottom large',
+                triggerText: 'this is a heading with a tooltip',
+                position: 'bottom',
+                size: 'large'
+            } 
+        %}
+        {{ tooltip.render(tooltip11) }}
+    </section>
+    
+    <h4>left</h4>
+    <section>
+        {% 
+            set tooltip12 = {
+                type: 'h4',
+                tooltipText: 'tooltiptext left small',
+                triggerText: 'this is a heading with a tooltip',
+                position: 'left'
+            } 
+        %}
+        {{ tooltip.render(tooltip12) }}
+    </section>
+
+    <h4>right</h4>
+    <section>
+        {% 
+            set tooltip13 = {
+                type: 'h5',
+                tooltipText: 'tooltiptext left small',
+                triggerText: 'this is a heading with a tooltip',
+                position: 'right',
+                size: 'small'
+            } 
+        %}
+        {{ tooltip.render(tooltip13) }}
+    </section>
+{% endblock %}

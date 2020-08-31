@@ -1,0 +1,6 @@
+# robots.txt for https://www.inbrija.com/
+
+Sitemap: https://www.inbrija.com/sitemap.xml
+
+User-Agent: *
+Allow: /

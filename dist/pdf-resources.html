@@ -1,0 +1,26 @@
+<!doctype html> <html lang="en-GB"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"> <meta name="format-detection" content="telephone=no"> <script>var eventsManager=void 0===eventsManager?{events:{},on:function(e,t){this.events[e]=this.events[e]||[],this.events[e].push(t)},off:function(e,t){if(this.events[e])for(var n=0;n<this.events[e].length;n++)if(this.events[e][n]===t){this.events[e].splice(n,1);break}},emit:function(e,t){this.events[e]&&this.events[e].forEach(function(e){e(t)})}}:eventsManager</script> <script>"www.inbrija.com"===window.location.hostname?function(e,t,a,n,m){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var g=t.getElementsByTagName(a)[0],o=t.createElement(a);o.async=!0,o.src="https://www.googletagmanager.com/gtm.js?id=GTM-PNKBT52&gtm_auth=kt3WgXFomq1RKt7qlKrhTg&gtm_preview=env-2&gtm_cookies_win=x",g.parentNode.insertBefore(o,g)}(window,document,"script","dataLayer"):function(e,t,a,n,m){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var g=t.getElementsByTagName(a)[0],o=t.createElement(a);o.async=!0,o.src="https://www.googletagmanager.com/gtm.js?id=GTM-PNKBT52&gtm_auth=dOkS5Wi7WjGQYmvpAx2kGg&gtm_preview=env-72&gtm_cookies_win=x",g.parentNode.insertBefore(o,g)}(window,document,"script","dataLayer")</script> </head> <body> <noscript> <iframe title="GTM" src="https://www.googletagmanager.com/ns.html?id=GTM-PNKBT52&gtm_auth=dOkS5Wi7WjGQYmvpAx2kGg&gtm_preview=env-72&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <script async> const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const filename = urlParams.get('file');
+		setTimeout(() => {
+			switch (filename) {
+            case 'doctor-discussion-guide.pdf':
+                window.location = 'https://talkaboutoff.com/doctor-discussion-guide.pdf';
+                break;
+            // case 'helpful-hints.pdf':
+            //     window.location = 'https://www.inbrija.com/helpful-hints.pdf';
+            //     break;
+            // case 'patient-brochure.pdf':
+            //     window.location = 'https://www.inbrija.com/patient-brochure.pdf';
+            //     break;
+            // case 'PIL_IFU_Spanish_English_Digital.pdf':
+            //     window.location = 'https://www.inbrija.com/PIL_IFU_Spanish_English_Digital.pdf';
+            //     break;
+			default:
+				if (filename.substr(-4) === '.pdf') {
+					window.location = '/' + filename;
+				} else {
+					window.location = '/404.html'
+				}
+				break;
+        }
+		}, 1200); </script> </body> </html> 
